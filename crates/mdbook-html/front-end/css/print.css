@@ -1,3 +1,8 @@
+:root {
+    --bg: hsl(0, 0%, 100%);
+    --fg: hsl(0, 0%, 0%);
+    --color-scheme: light;
+}
 
 #mdbook-sidebar,
 #mdbook-menu-bar,

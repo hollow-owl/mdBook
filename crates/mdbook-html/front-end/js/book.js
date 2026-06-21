@@ -527,6 +527,16 @@ aria-label="Show hidden lines"></button>';
             break;
         }
     });
+
+    // When printing, use light theme to ensure text is readable
+    window.addEventListener('beforeprint', function() {
+        stylesheets.ayuHighlight.disabled = true;
+        stylesheets.tomorrowNight.disabled = true;
+        stylesheets.highlight.disabled = false;
+    });
+    window.addEventListener('afterprint', function() {
+        set_theme(get_theme(), false);
+    });
 })();
 
 (function sidebar() {
